@@ -1,0 +1,49 @@
+@import url("https://api.fontshare.com/v2/css?f[]=panchang@500,400&f[]=satoshi@300&display=swap");
+/* font-family: 'Panchang', sans-serif;
+- A.ISearch 
+
+font-family: 'Satoshi', sans-serif;
+- Nav
+- 
+*/
+
+
+/* @import url()  */
+/* 
+font-family: Bauziet;
+
+- Discover, Compare, Excel with AI.
+- featured article
+-Unraveling the AI Landscape: A Beginner's Guide
+-The Evolution of AI: Trends Shaping the Future
+-ElevenLabs
+-This Week Spotlight
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+/* 
+font-family: 'Red Hat Display', sans-serif;
+
+- we are dedicated to simplifying your
+- 03 Aug. 2023
+-Read More
+-04 Aug. 2023
+-Read More
+- ChatGPT 
+*/
+
+
+@font-face {
+    font-family: 'BauzietRegular'; /* Use a name without spaces */
+    src: url('./fonts/Bauziet-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+   
+  h1 {
+  
+    font-family: 'BauzietRegular'; 
+  
+  }   
