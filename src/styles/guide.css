@@ -35,15 +35,14 @@ font-family: 'Red Hat Display', sans-serif;
 
 
 @font-face {
-    font-family: 'BauzietRegular'; /* Use a name without spaces */
+    font-family: 'BauzietRegular'; 
+    /* Use a name without spaces */
     src: url('./fonts/Bauziet-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
-   
+/*    
   h1 {
-  
     font-family: 'BauzietRegular'; 
-  
-  }   
+  }    */
