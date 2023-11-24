@@ -2,9 +2,10 @@
 
 const Products = () => {
   return (
-    <div className="w-full h-full border-2 border-gray-500 bg-lightGray">
-      
-    </div>
-  );}
+    <div
+      className="w-full h-full rounded-2xl bg-opacity-10 border border-gray-500 bg-gray-200"
+    ></div>
+  );
+};
 
-export default Products
+export default Products;

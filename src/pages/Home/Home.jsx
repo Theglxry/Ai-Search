@@ -9,31 +9,25 @@ import {
 import styles from "../../styles/style";
 
 const HomePage = () => {
-  // return <div className="text-secondary text-6xl font-santoshi">Home</div>;
   return (
-    <main className="bg-darkGray w-full h-screen overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
+    <main className="scrollable-content w-full px-8 h-screen relative overflow-auto">
+      <div className={`${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth} mb-24`}>
           <NavBar />
         </div>
       </div>
 
-    
+      <div className={`h-screen flex-col gap-16 ${styles.flexCenter} ${styles.boxWidth}`} >
+        <div className={`top-section h-screen flex flex-col gap-16 sm:gap-4 md:flex-row  ${styles.boxWidth}`} >
+          <HeroBox />
+          <Featured />
+          <Spotlight />
+        </div>
 
-      <div className={`h-full flex-col ${styles.flexCenter} ${styles.boxWidth}`}>
-      <div className={`h-1/2 border-red-500 border-2  ${styles.flexCenter} ${styles.boxWidth}`}>
-      <HeroBox />
-       <Featured />
-       <Spotlight />
+        <div className="w-full h-full">
+          <Product />
+        </div>
       </div>
-    
-
-
-       <div className="w-full h-1/2 border-yellow-500 border-2">
-        <Product />
-       </div>
-      </div>
-
     </main>
   );
 };

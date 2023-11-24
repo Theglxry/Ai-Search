@@ -7,14 +7,15 @@ import elevenLabImg from "./elevenlabs.webp";
 import evolutionImg from "./evolution-featured.jpg";
 import firefiles from "./firefiles.png";
 import slantArrow from "./frame19.svg";
-import group from ".group.png";
-import chatGPTImg from "./gtp-featured.jgp";
+import group from "./group.png";
+import chatGPTImg from "./gtp-featured.jpg";
 import plusCircle from "./plusCircle.svg";
 import search from "./search.svg"
 import vector from "./Vector.svg";
 import gridBlack from "./view-grid.svg";
 import gridPurple from "./view-grid1.svg";
 import gridWhite from "./view-grid2.svg";
+import menu from "./mobile-menu.svg";
 
 
 
@@ -38,5 +39,6 @@ search,
 vector,
 gridBlack,
 gridPurple,
-gridWhite
+gridWhite,
+menu,
 }

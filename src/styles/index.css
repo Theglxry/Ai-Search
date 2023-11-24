@@ -1,7 +1,5 @@
 @import url("https://api.fontshare.com/v2/css?f[]=panchang@500,400&f[]=satoshi@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +8,52 @@
 body {
   width: 100%;
   height: 100vh;
-  /* font-family: sato; */
-  /* color: aliceblue; */
-  /* background: #1C1C1C; */
+  background: #1c1c1c;
+}
+@font-face {
+  font-family: "BauzietRegular";
+  /* Use a name without spaces */
+  src: url("../styles/Bauziet-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hb-h1, .sp-text {
+  font-family: "BauzietRegular";
+}
+
+.scrollable-content {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Style the scrollbar (optional) */
+.scrollable-content::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.card-skeleton {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border: 1px solid grey;
+
+  color: #3f3e3e;
+  border-radius: 5px;
+}
+
+.card-skeleton .left-col {
+  margin-right: 1rem;
+}
+.card-skeleton .right-col {
+  flex: 1;
 }

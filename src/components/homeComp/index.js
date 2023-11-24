@@ -5,7 +5,6 @@ import Spotlight from "./Spotlight"
 import Product from "./Products";
 
 
-
 export  {
     NavBar,
     HeroBox,
