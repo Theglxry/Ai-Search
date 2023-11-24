@@ -5,13 +5,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
 
 
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
   height: 100vh;
   background: #1c1c1c;
 }

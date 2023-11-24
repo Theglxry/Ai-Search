@@ -17,21 +17,19 @@ const Featured = () => {
   };
 
   return (
-    // <section className="flex flex-col gap-4 w-full md:w-1/3 h-[50vh] md:h-full relative border">
-    <section className="flex flex-col gap-4 w-full md:w-1/3 h-screen md:h-full relative border">
+    // <section className="flex flex-col gap-4 w-full md:w-1/3 h-[50vh] md:h-full relative border-2 border-red-700">
+    <section className="flex flex-col gap-4 w-full md:w-1/3  h-[50vh] md:h-full relative border-2 border-red-700" style={{border: '2px solid red'}}>
+
 
       <div>
         <p className="text-gray-400 text-lg"> Featured Articles</p>
       </div>
 
+ 
 
-
-
-
-      <div className=" w-full h-auto md:h-full rounded-2xl relative bg-center bg-no-repeat bg-cover object-cover" 
+      <div className=" w-full h-screen md:h-full rounded-2xl relative bg-center bg-no-repeat bg-cover object-cover" 
       
       style={{ ...backgroundImageStyle1 }}
-      // /assets/gtp-featured.jpg
       >
 
        
@@ -47,7 +45,6 @@ const Featured = () => {
               className="flex rounded-lg text-gray-400 text-sm items-center" 
               style={{ gap: "4px" }}  
             >
-              {/* Added margin-right */}
               <p style={{ marginRight: "0px" }}> Read more </p>
               <img
                 src={arrowCircleRight}
@@ -64,7 +61,7 @@ const Featured = () => {
 
 
       <div
-        className="w-full h-full md:h-full rounded-2xl relative"
+        className="w-full h-screen md:h-full rounded-2xl relative"
 
 
         style={{ ...backgroundImageStyle2 }}
@@ -81,7 +78,6 @@ const Featured = () => {
               className="flex rounded-lg text-gray-400 text-sm items-center" 
               style={{ gap: "4px" }}  
             >
-              {/* Added margin-right */}
               <p style={{ marginRight: "0px" }}> Read more </p>
               <img
                 src={arrowCircleRight}
@@ -93,6 +89,9 @@ const Featured = () => {
         </div>
         </div>
       </div>
+
+
+
     </section>
   );
 };
