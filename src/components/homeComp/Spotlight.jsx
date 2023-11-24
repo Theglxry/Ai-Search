@@ -10,18 +10,31 @@ const Spotlight = () => {
   };
 
   return (
-    <section className="flex flex-col gap-4  w-full md:w-[30rem] h-full p-4 border border-mid2Gray rounded-2xl ">
+    <section className="flex flex-col gap-4  w-full md:w-[30rem] h-screen md:h-full p-4 border-mid2Gray border rounded-2xl ">
       <div
-        className="w-full h-full rounded-2xl bg-tertiary"
+        className="child-1 w-full md:h-full border rounded-2xl relative"
         style={backgroundImageStyle}
       >
-        <div className="flex w-full h-full items-center justify-center text-white font-bold ">
-          <h1 className="sp-text text-lg">ElevenLabs </h1>{" "}
+        {/* Background overlay for shadow effect */}
+        <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+
+        {/* Content */}
+        <div className="flex items-center justify-center text-white font-bold w-full h-full">
+          <h1 className="sp-text text-lg">ElevenLabs</h1>
         </div>
       </div>
 
+
+
+
+
+
+
+
+
+
       {/* _______________________________ SPOTLIGHT SECTION ___________________________ */}
-      <div className="w-full h-full rounded-2xl">
+      <div className="child-2 w-full h-full md:h-full rounded-2xl">
         <h4 className="text-gray-400">This Week Spotlight</h4>
         <div>
           {/* todo->>>__________________  CHANGE THE LIST TO MAP INSTEAD OF REPEATING CODE _________________ */}

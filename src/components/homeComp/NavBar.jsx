@@ -46,8 +46,8 @@ const navBar = () => {
       <div className="sm:flex hidden font-redHatDisplay text-sm md:text-base font-bold">
         <a
           href="#"
-          className="flex rounded-lg border border-darkGray items-center bg-tertiary px-3 py-3" // Adjusted padding here
-          style={{ gap: "4px" }} // Added gap between flex items
+          className="flex rounded-lg border border-darkGray items-center bg-tertiary px-3 py-3" 
+          style={{ gap: "4px" }}  
         >
           <img
             src={plusCircle}

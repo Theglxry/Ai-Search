@@ -18,13 +18,13 @@ const HomePage = () => {
       </div>
 
       <div className={`h-screen flex-col gap-16 ${styles.flexCenter} ${styles.boxWidth}`} >
-        <div className={`top-section h-screen flex flex-col gap-16 sm:gap-4 md:flex-row  ${styles.boxWidth}`} >
+        <div className="top-section w-full h-screen flex flex-col gap-16 sm:gap-4 md:flex-row" >
           <HeroBox />
           <Featured />
           <Spotlight />
         </div>
 
-        <div className="w-full h-full">
+        <div className="w-full h-screen">
           <Product />
         </div>
       </div>

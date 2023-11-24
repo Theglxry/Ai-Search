@@ -10,7 +10,7 @@ const HeroBox = () => {
 
   return (
     <div
-      className="w-full md:w-1/2 h-full rounded-2xl bg-skyBlue p "
+      className="w-full md:w-1/2 h-screen md:h-full rounded-2xl bg-skyBlue p "
       style={backgroundImageStyle}
     >
       <div className="hero-content flex flex-col gap-6 p-6  ss:p-8  md:p-16 mb-16">

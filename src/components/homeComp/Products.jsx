@@ -2,9 +2,12 @@
 
 const Products = () => {
   return (
-    <div
+    <section
       className="w-full h-full rounded-2xl bg-opacity-10 border border-gray-500 bg-gray-200"
-    ></div>
+    >
+
+      
+    </section>
   );
 };
 
