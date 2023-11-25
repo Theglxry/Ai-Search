@@ -10,21 +10,24 @@ import styles from "../../styles/style";
 
 const HomePage = () => {
   return (
-    <main className="scrollable-content w-screen px-8 h-screen relative overflow-auto border-2 border-red-500">
+    <main className="scrollable-content w-full px-8 h-full relative overflow-auto">
       <div className={`${styles.flexCenter}`}>
         <div className={`${styles.boxWidth} mb-24`}>
           <NavBar />
         </div>
       </div>
 
-      <div className={`h-screen flex-col gap-16 border-2 border-red-500 ${styles.flexCenter} ${styles.boxWidth}`} >
-        <div className="top-section w-full h-screen flex flex-col gap-16 sm:gap-4 md:flex-row" >
+
+
+      <div className={`w-full h-full flex-col gap-16 ${styles.flexCenter}`} >
+        <div className="top-section w-full h-full flex flex-col gap-16 sm:gap-4 sm:flex-row" >
           <HeroBox />
           <Featured />
           <Spotlight />
         </div>
 
-        <div className="w-full h-screen">
+
+        <div className="w-full h-full">
           <Product />
         </div>
       </div>

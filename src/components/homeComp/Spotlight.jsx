@@ -1,21 +1,23 @@
 import { elevenLabImg, slantArrow } from "../../assets";
 
 const Spotlight = () => {
-  const backgroundImageStyle = {
-    backgroundImage: `url(${elevenLabImg})`,
-    backgroundSize: "cover",
-    objectFit: "cover",
-    backgroundPosition: "bottom",
-    backgroundRepeat: "no-repeat",
-  };
+  // const backgroundImageStyle = {
+  //   backgroundImage: `url(${elevenLabImg})`,
+  //   backgroundSize: "cover",
+  //   objectFit: "cover",
+  //   backgroundPosition: "bottom",
+  //   backgroundRepeat: "no-repeat",
+  // };
 
   return (
-    <section className="spotlight-container   w-full md:w-[30rem] md:h-full  p-4 border-mid2Gray border-2 rounded-2xl  style={{ border: '2px solid green' }} ">
-      <div className="w-full h-[50vh] md:h-full flex flex-col gap-4"  style={{ border: '2px solid red' }}>
+    <section className="spotlight-container   w-full md:w-[30rem] md:h-full  p-4 border-mid2Gray border-2 rounded-2xl" style={{ border: '2px solid red' }}>
+    
+      <div className="w-full h-[50vh] md:h-full flex flex-col gap-4 " style={{ border: '2px solid green' }} >
         <div
           className="child-1 w-full h-full md:h-full border rounded-2xl relative"
-          style={backgroundImageStyle}
+          // style={backgroundImageStyle}
         >
+           <img src={elevenLabImg} className="w-full  max-h-full"/>
           {/* Background overlay for shadow effect */}
           <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
 
@@ -24,6 +26,9 @@ const Spotlight = () => {
             <h1 className="sp-text text-lg">ElevenLabs</h1>
           </div>
         </div>
+
+
+
 
         {/* _______________________________ SPOTLIGHT SECTION ___________________________ */}
         <div className="child-2 w-full h-full md:h-full rounded-2xl">
