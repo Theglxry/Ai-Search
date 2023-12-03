@@ -11,12 +11,11 @@ const HeroBox = () => {
   return (
     <section
       // className="w-full md:w-1/2 h-auto ss:h-[150vh] ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
-      className="w-full md:w-1/2 h-auto ss:border-2  rounded-2xl bg-skyBlue"
+      className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
 
       style={backgroundImageStyle}
     >
-      <div className="hero-content flex flex-col gap-6 p-6  ss:p-8  md:p-16 mb-16">
-        {/* <div className="hb-h1 text-darkGray text-[2rem] md:text[2.5rem]  "> */}
+      <div className="hero-content flex flex-col gap-6 p-6  md: ss:p-8  md:p-16 mb-16">
         <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:5xl  ">
 
           <h1>Discover, Compare, Excel with AI.</h1>

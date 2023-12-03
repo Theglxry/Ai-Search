@@ -8,8 +8,10 @@ const Featured = () => {
       </div>
 
       {/* FEAURED ONE  */}
-      <div className="featured-child1 w-full flex flex-col justify-center items-center gap-4">
-        <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl">
+      <div className="featured w-full flex flex-col justify-center items-center gap-4 md:h-[400px]">
+        <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl "
+        
+        >
           <img src={chatGPTImg} className="w-full object-cover " />
 
           <div className="text-content absolute w-full p-4 bottom-0 bg-midGray rounded-b-xl">
