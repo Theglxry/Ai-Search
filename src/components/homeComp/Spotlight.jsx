@@ -1,28 +1,16 @@
 import { elevenLabImg, slantArrow } from "../../assets";
 
 const Spotlight = () => {
-  // const backgroundImageStyle = {
-  //   backgroundImage: `url(${elevenLabImg})`,
-  //   backgroundSize: "cover",
-  //   objectFit: "cover",
-  //   backgroundPosition: "bottom",
-  //   backgroundRepeat: "no-repeat",
-  // };
-
   return (
-    <section className="spotlight-container   w-full md:w-[30rem] md:h-full  p-4 border-mid2Gray border-2 rounded-2xl" style={{ border: '2px solid red' }}>
-    
-      <div className="w-full h-[50vh] md:h-full flex flex-col gap-4 " style={{ border: '2px solid green' }} >
-        <div
-          className="child-1 w-full h-full md:h-full border rounded-2xl relative"
-          // style={backgroundImageStyle}
-        >
-           <img src={elevenLabImg} className="w-full  max-h-full"/>
-          {/* Background overlay for shadow effect */}
-          <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
-
+    <section className="spotlight-container w-full md:w-[30rem] h-auto p-4 border-mid2Gray border-2 rounded-2xl"
+   style={{border: `0.5px solid gray`}}
+    >
+      <div className="w-full flex flex-col gap-4 ">
+        <div className="child-1 w-full border rounded-2xl relative">
+          <img src={elevenLabImg} className="w-full rounded-t-xl" />
+          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
           {/* Content */}
-          <div className="flex items-center justify-center text-white font-bold w-full h-full">
+          <div className="flex items-center justify-center text-white font-bold w-full ">
             <h1 className="sp-text text-lg">ElevenLabs</h1>
           </div>
         </div>
@@ -30,8 +18,14 @@ const Spotlight = () => {
 
 
 
+
+
+
+
+
+
         {/* _______________________________ SPOTLIGHT SECTION ___________________________ */}
-        <div className="child-2 w-full h-full md:h-full rounded-2xl">
+        <div className="child-2 w-full rounded-2xl">
           <h4 className="text-gray-400">This Week Spotlight</h4>
           <div>
             {/* todo->>>__________________  CHANGE THE LIST TO MAP INSTEAD OF REPEATING CODE _________________ */}
@@ -106,6 +100,10 @@ const Spotlight = () => {
                   </div>
                 </a>
               </li>
+
+
+
+              
             </ul>
           </div>
         </div>
