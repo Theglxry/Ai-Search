@@ -2,9 +2,7 @@ import { chatGPTImg, evolutionImg, arrowCircleRight } from "../../assets";
 
 const Featured = () => {
   return (
-    <section
-      className="featured-wrapper flex flex-col gap-4 w-full h-auto md:w-1/3 relative"
-    >
+    <section className="featured-wrapper flex flex-col gap-4 w-full h-auto md:w-1/3 md:ml-10 md:mr-4">
       <div>
         <p className="text-gray-400 text-lg"> Featured Articles</p>
       </div>
@@ -36,9 +34,6 @@ const Featured = () => {
             </div>
           </div>
         </div>
-
-
-
 
         {/* FEAURED TWO */}
         <div className="featured-child2 relative w-full flex justify-center items-center overflow-hidden rounded-xl">
