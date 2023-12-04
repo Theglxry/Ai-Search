@@ -20,22 +20,22 @@ const navBar = () => {
       <div>
         <ul className="sm:flex flex-row gap-8 text-white hidden ">
           <li
-            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" // Adjusted padding here
-            style={{ gap: "4px" }} // Added gap between flex items
+            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" 
+            style={{ gap: "4px" }}  
           >
             <img src={gridPurple} />
             Discover
           </li>
           <li
-            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" // Adjusted padding here
-            style={{ gap: "4px" }} // Added gap between flex items
+            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" 
+            style={{ gap: "4px" }}  
           >
             <img src={bookmark} />
             Favorite
           </li>
           <li
-            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" // Adjusted padding here
-            style={{ gap: "4px" }} // Added gap between flex items
+            className="flex rounded-lg border border-darkGray items-center   px-3 py-3" 
+            style={{ gap: "4px" }}  
           >
             <img src={collectionIcon} />
             Blog

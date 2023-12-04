@@ -17,7 +17,7 @@ const Featured = () => {
           <div className="text-content absolute w-full p-4 bottom-0 bg-midGray rounded-b-xl">
             <p className="text-secondary">03 Aug. 2023</p>
             <h2 className="text-white">
-              Unraveling the AI Landscape: A Beginner's Guide
+              Unraveling the AI Landscape: A Beginners Guide
             </h2>
 
             <div className="sm:flex font-redHatDisplay text-sm md:text-base font-bold float-right">

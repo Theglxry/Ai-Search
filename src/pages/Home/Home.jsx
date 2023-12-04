@@ -19,18 +19,18 @@ const HomePage = () => {
 
 
 
-      <div className={`w-full max-h-full flex-col gap-16 ${styles.flexCenter}`} >
-        <div className="top-section w-full h-auto flex flex-col gap-16 md:gap-0 md:flex-row" >
+      <section className={`w-full max-h-full flex-col gap-16 ${styles.flexCenter}`} >
+        <section className="top-section w-full h-auto flex flex-col gap-16 md:gap-0 md:flex-row" >
           <HeroBox />
           <Featured />
           <Spotlight />
-        </div>
+        </section>
 
 
-        <div className="w-full h-full">
+        <section className="w-full h-full">
           <Product />
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
   );
 };
