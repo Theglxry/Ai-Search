@@ -5,7 +5,7 @@ import AOS from "aos";
 const HeroBox = () => {
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
-    AOS.refresh();
+    AOS.init();
   }, []);
 
   const backgroundImageStyle = {

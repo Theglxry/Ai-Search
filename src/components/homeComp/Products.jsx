@@ -11,7 +11,7 @@ const Products = () => {
 
   useEffect (() => {
     // Refresh AOS whenever your component mounts/updates
-    AOS.refresh();
+    AOS.init();
   }, []);
 
 

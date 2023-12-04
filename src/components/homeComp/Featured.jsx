@@ -1,24 +1,27 @@
 import { chatGPTImg, evolutionImg, arrowCircleRight } from "../../assets";
 import {useEffect } from "react";
 import AOS from "aos";
+
+
+
 const Featured = () => {
 
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
-    AOS.refresh();
+    AOS.init();
   }, []);
 
   return (
     <section className="featured-wrapper flex flex-col gap-4 w-full h-auto md:w-1/3 md:ml-10 md:mr-4">
       <div>
-        <p className="text-gray-400 text-lg"> Featured Articles</p>
+        <p className="text-gray-400 text-lg sm:text-xl"> Featured Articles</p>
       </div>
 
       {/* FEAURED ONE  */}
-      <div className="featured w-full flex flex-col justify-center items-center gap-4 md:h-[400px]">
+      <div className="featured w-full flex flex-col justify-center items-center gap-8 md:h-[400px]">
         <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl "
-         data-aos="fade-left"
-        data-aos-duration="1000" 
+         data-aos="fade-right"
+        data-aos-duration="2000" 
 
         >
           <img src={chatGPTImg} className="w-full object-cover " />

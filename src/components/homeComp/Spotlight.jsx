@@ -5,14 +5,19 @@ import AOS from "aos";
 const Spotlight = () => {
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
-    AOS.refresh();
+    AOS.init({
+      duration: 1200,
+    });
+
+
+ 
   }, []);
 
   return (
     <section className="spotlight-container w-full md:w-[30rem] h-auto p-4 border-mid2Gray border-2 rounded-2xl"
    style={{border: `0.5px solid gray`}}
    data-aos="zoom-in"
-   data-aos-duration="1000" 
+  //  data-aos-duration="1000" 
 
     >
       <div className="w-full flex flex-col gap-4 ">
@@ -20,7 +25,7 @@ const Spotlight = () => {
           <img src={elevenLabImg} className="w-full rounded-t-xl" />
           <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
           {/* Content */}
-          <div className="flex items-center justify-center text-white font-bold w-full ">
+          <div className="absolute top-[50%] flex items-center justify-center text-white font-bold w-full ">
             <h1 className="sp-text text-lg">ElevenLabs</h1>
           </div>
         </div>

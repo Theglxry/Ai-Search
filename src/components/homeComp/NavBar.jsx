@@ -4,19 +4,22 @@ import { navLinks } from "../../constants/constants";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 
+
+
+
 const navBar = () => {
   const [toggle, setToggle] = useState(false);
 
  useEffect (() => {
     // Refresh AOS whenever your component mounts/updates
-    AOS.refresh();
+    AOS.init();
   }, []);
 
   return (
     <>
       <nav className="w-full flex py-8 justify-between items-center" 
        data-aos="fade-right"  
-        data-aos-duration="1000" 
+        data-aos-duration="2000" 
       
       >
         <div className="text-white font-panchang text-4xl font-bold">
