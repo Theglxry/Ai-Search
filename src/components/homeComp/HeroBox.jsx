@@ -1,26 +1,30 @@
 import { group, gridBlack } from "../../assets/index";
-
-
-
-
+import { useEffect } from "react";
+import AOS from "aos";
 
 const HeroBox = () => {
+  useEffect(() => {
+    // Refresh AOS whenever your component mounts/updates
+    AOS.refresh();
+  }, []);
+
   const backgroundImageStyle = {
     backgroundImage: `url(${group})`,
-    backgroundSize: "70%",  
-    backgroundPosition: "bottom",  
-    backgroundRepeat: "no-repeat",  
+    backgroundSize: "70%",
+    backgroundPosition: "bottom",
+    backgroundRepeat: "no-repeat",
   };
 
   return (
     <section
       className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
-
       style={backgroundImageStyle}
+      data-aos="flip-up"
+      data-aos-duration="1000" 
+
     >
       <div className="hero-content flex flex-col gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16">
         <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:6xl  ">
-
           <h1>Discover, Compare, Excel with AI.</h1>
         </div>
 
@@ -42,7 +46,6 @@ const HeroBox = () => {
           </a>
         </div>
       </div>
-      
     </section>
   );
 };

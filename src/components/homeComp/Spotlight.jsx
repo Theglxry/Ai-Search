@@ -1,9 +1,19 @@
 import { elevenLabImg, slantArrow } from "../../assets";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Spotlight = () => {
+  useEffect(() => {
+    // Refresh AOS whenever your component mounts/updates
+    AOS.refresh();
+  }, []);
+
   return (
     <section className="spotlight-container w-full md:w-[30rem] h-auto p-4 border-mid2Gray border-2 rounded-2xl"
    style={{border: `0.5px solid gray`}}
+   data-aos="zoom-in"
+   data-aos-duration="1000" 
+
     >
       <div className="w-full flex flex-col gap-4 ">
         <div className="child-1 w-full border rounded-2xl relative">

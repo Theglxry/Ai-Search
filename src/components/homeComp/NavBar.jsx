@@ -1,14 +1,24 @@
 // import React from 'react'
 import { plusCircle, menu, close } from "../../assets";
 import { navLinks } from "../../constants/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
 
 const navBar = () => {
   const [toggle, setToggle] = useState(false);
 
+ useEffect (() => {
+    // Refresh AOS whenever your component mounts/updates
+    AOS.refresh();
+  }, []);
+
   return (
     <>
-      <nav className="w-full flex py-8 justify-between items-center">
+      <nav className="w-full flex py-8 justify-between items-center" 
+       data-aos="fade-right" 
+        data-aos-duration="1000" 
+      
+      >
         <div className="text-white font-panchang text-4xl font-bold">
           A.ISearch
         </div>
@@ -72,8 +82,8 @@ const navBar = () => {
                   className={`flex items-center
                     font-nomal cursor-pointer 
                     text-[16px] ${
-                  index === navLinks.length - 1 ? "mr-0" : "mb-4"
-                } text-white`}
+                      index === navLinks.length - 1 ? "mr-0" : "mb-4"
+                    } text-white`}
                 >
                   <img className="w-6 h-6" src={nav.img} />
 

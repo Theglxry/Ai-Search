@@ -1,6 +1,13 @@
 import { chatGPTImg, evolutionImg, arrowCircleRight } from "../../assets";
-
+import {useEffect } from "react";
+import AOS from "aos";
 const Featured = () => {
+
+  useEffect(() => {
+    // Refresh AOS whenever your component mounts/updates
+    AOS.refresh();
+  }, []);
+
   return (
     <section className="featured-wrapper flex flex-col gap-4 w-full h-auto md:w-1/3 md:ml-10 md:mr-4">
       <div>
@@ -10,7 +17,9 @@ const Featured = () => {
       {/* FEAURED ONE  */}
       <div className="featured w-full flex flex-col justify-center items-center gap-4 md:h-[400px]">
         <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl "
-        
+         data-aos="fade-left"
+        data-aos-duration="1000" 
+
         >
           <img src={chatGPTImg} className="w-full object-cover " />
 
@@ -38,7 +47,11 @@ const Featured = () => {
         </div>
 
         {/* FEAURED TWO */}
-        <div className="featured-child2 relative w-full flex justify-center items-center overflow-hidden rounded-xl">
+        <div className="featured-child2 relative w-full flex justify-center items-center overflow-hidden rounded-xl"
+         data-aos="fade-right"
+        data-aos-duration="1000" 
+
+        >
           <img src={evolutionImg} className="w-full object-cover" />
 
           <div className="text-content absolute w-full p-4 bottom-0 bg-midGray rounded-b-xl">
