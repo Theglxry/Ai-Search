@@ -1,5 +1,9 @@
 import { group, gridBlack } from "../../assets/index";
 
+
+
+
+
 const HeroBox = () => {
   const backgroundImageStyle = {
     backgroundImage: `url(${group})`,
@@ -10,7 +14,6 @@ const HeroBox = () => {
 
   return (
     <section
-      // className="w-full md:w-1/2 h-auto ss:h-[150vh] ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
       className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
 
       style={backgroundImageStyle}

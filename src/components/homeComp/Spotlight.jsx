@@ -41,7 +41,7 @@ const Spotlight = () => {
                         ChatGPT
                       </span>
 
-                      <span className="spotlight-tag inline-flex font-redHatDisplay text-gray-400 items-center justify-center px-2 py-0.5 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray">
+                      <span className="spotlight-tag inline-flex font-redHatDisplay text-gray-300 items-center justify-center px-2 py-0.5 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray">
                         Search Engine
                       </span>
                     </div>
@@ -65,7 +65,7 @@ const Spotlight = () => {
                         Synthesis{" "}
                       </span>
 
-                      <span className="spotlight-tag inline-flex font-redHatDisplay  text-gray-400 items-center justify-center px-2 py-0.5 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray ">
+                      <span className="spotlight-tag inline-flex font-redHatDisplay  text-gray-300 items-center justify-center px-2 py-0.5 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray ">
                         Video
                       </span>
                     </div>
@@ -89,7 +89,7 @@ const Spotlight = () => {
                         LetsAsk{" "}
                       </span>
 
-                      <span className="spotlight-tag inline-flex font-redHatDisplay  text-gray-400 items-center justify-center px-2 py-0.5 text-xs font-thin bg-midGray shadow-2xl ring-1 rounded ring-mid2Gray ">
+                      <span className="spotlight-tag inline-flex font-redHatDisplay  text-gray-300 items-center justify-center px-2 py-0.5 text-xs font-thin bg-midGray shadow-2xl ring-1 rounded ring-mid2Gray ">
                         Customer Support
                       </span>
                     </div>

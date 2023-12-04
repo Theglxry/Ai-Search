@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useState } from "react";
+import { search, gridWhite } from "../../assets";
 import data from "../../mock/data";
 
 const Products = () => {
@@ -8,53 +9,32 @@ const Products = () => {
   console.log(allItems);
 
   return (
-    <section className="w-full h-[50vh] text-white px-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 border border-gray-500 bg-gray-200">
-      <div
-        className="div-wrapper w-full h-full"
-        style={{ border: "1px solid red" }}
-      >
-        <div className="search-categories-wrapper w-full flex flex-col sm:flex-row justify-between">
-          <form
-            className="w-full sm:w-1/4"
-            style={{ border: "1px solid green" }}
-          >
+    <section className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 border border-gray-500 bg-gray-200">
+      <div className="div-wrapper w-full h-full">
+        <div className="search-categories-wrapper w-full flex flex-col sm:flex-row justify-between sm:mb-8">
+          <form className="w-full sm:w-1/4">
             <label
               htmlFor="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              className="mb-2 text-sm font-medium sr-only text-white"
             >
-              {" "}
-              Search{" "}
+              Search
             </label>
 
             <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
               <input
                 type="search"
-                id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search Mockups, Logos..."
+                className="flex item-center focus:outline-none w-full py-3 ps-10 text-sm rounded-lg bg-mid4Gray border-gray-600 placeholder-gray-400 text-white"
+                placeholder="Search..."
                 required
+                // style={{border:'1px solid gray'}}
+                
               />
+
               <button
                 type="submit"
-                className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="flex items-center text-black w-auto font-redHatDisplay absolute end-1 bottom-1 font-medium rounded-md text-lg px-4 py-1 bg-secondary"
               >
+                <img className="w-6 h-6" src={search} alt="search icon" />
                 Search
               </button>
             </div>
@@ -65,15 +45,54 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="product-wrapper">
+        <div className="product-wrapper w-full items-center  ">
           {allItems.map((items) => {
             const { id, title, tag, packageType, price, img } = items;
 
-            
+            return (
+              <div
+                key={id}
+                className="productItems w-full flex justify-between p-3 text-base bg-mid3Gray rounded-lg mb-4 sm:mb-8"
+              >
+                <div className="prodItemsDeets flex items-center gap-4 w-auto">
+                  <img className="w-6 h-6" src={img} alt="product images" />
+
+                  <div className="title-tag text-center flex flex-col sm:flex-row  sm:gap-8 ">
+                    <h1 className="text-base sm:text-2xl font-extrabold">
+                      {title}
+                    </h1>
+                    <p className="spotlight-tag inline-flex font-redHatDisplay text-gray-300 items-center justify-center p-1 sm:px-2 sm:py-2 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray">
+                      {tag}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="productPricing flex items-center gap-4">
+                  <p className="font-redHatDisplay text-xs sm:text-base text-black py-1 px-3 rounded-md bg-white">
+                    {packageType}
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <p className="font-santoshi font-extrabold text-lg sm:text-xl">
+                      {price}/
+                    </p>
+                    <span className="font-redHatDisplay bottom-0">Month</span>
+                  </div>
+                </div>
+              </div>
+            );
           })}
         </div>
 
-        <button className="View-more"></button>
+        <div className="flex items-center justify-center font-redHatDisplay text-sm md:text-sm">
+          <a
+            href="#"
+            className="flex rounded-lg border border-darkGray items-center bg-mid3Gray px-8 py-3"
+            style={{ border: "1px solid" }}
+          >
+            <img src={gridWhite} className="w-4 h-4 mr-1" alt="grid discover" />{" "}
+            View More
+          </a>
+        </div>
       </div>
     </section>
   );

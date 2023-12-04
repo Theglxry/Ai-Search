@@ -1,5 +1,7 @@
-import {chatGPT, elevenLab, firefiles } from "../assets/index";
-
+// import {chatGPT, elevenLab, firefiles } from "../assets/index";
+import chatGPT from "../assets/chatGPT-logo.png";
+import  elevenLab  from "../assets/elevenLab.png";
+import  firefiles from "../assets/firefiles.png";
 
 const allItems = [
     {
@@ -8,7 +10,7 @@ const allItems = [
       tag:'A.I chatbot',
       packageType:' Freemium',
       price:'$20',
-      img: {chatGPT},
+      img: chatGPT,
       category: 'Copywriting',     
     },
     {
@@ -17,7 +19,7 @@ const allItems = [
       tag:'Text-to-Speech',
       packageType:' Freemium',
       price:'$20',
-      img: {elevenLab},
+      img: elevenLab,
       category: 'Social Media',  
     },
     {
@@ -26,7 +28,7 @@ const allItems = [
       tag:'Note taking A.I',
       packageType:' Freemium',
       price:'$20',
-      img: {firefiles},
+      img: firefiles,
       category: 'Free Tools',  
     },
 

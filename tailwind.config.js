@@ -12,6 +12,8 @@ export default {
         dimGray: "#343A40",
         midGray: "#2E2E2E",
         mid2Gray: "#3f3e3e",
+        mid3Gray: "#242424",
+        mid4Gray:"#484848",
         coolGray: "#111827 ",
         darkGray: "#1C1C1C",
       },
