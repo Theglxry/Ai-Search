@@ -71,7 +71,7 @@ const navBar = () => {
            p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 
            min-w[140px] rounded-xl sidebar flex-col items-center gap-8
            
-           text-white bg-midGray z-50
+           text-white bg-midGray opacity-100
            `}
             style={{ border: "1px solid gray" }}
           >

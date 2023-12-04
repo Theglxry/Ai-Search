@@ -17,13 +17,13 @@ const HeroBox = () => {
 
   return (
     <section
-      className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue z-50"
+      className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue "
       style={backgroundImageStyle}
       // data-aos="fade-right"
 
     >
       <div className="hero-content flex flex-col gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16"
-      data-aos="fade-right"
+      // data-aos="fade-right"
       
       >
         <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:6xl  ">
