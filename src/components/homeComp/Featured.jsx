@@ -21,7 +21,7 @@ const Featured = () => {
       <div className="featured w-full flex flex-col justify-center items-center gap-8 md:h-[400px]">
         <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl "
          data-aos="fade-right"
-        data-aos-duration="2000" 
+        data-aos-duration="2000"  
 
         >
           <img src={chatGPTImg} className="w-full object-cover " />
