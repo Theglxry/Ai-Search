@@ -9,7 +9,8 @@ const Products = () => {
   console.log(allItems);
 
   return (
-    <section className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 border border-gray-500 bg-gray-200">
+    <section className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 "
+    style={{border:'1px solid gray'}}>
       <div className="div-wrapper w-full h-full">
         <div className="search-categories-wrapper w-full flex flex-col sm:flex-row justify-between sm:mb-8">
           <form className="w-full sm:w-1/4">
@@ -23,11 +24,20 @@ const Products = () => {
             <div className="relative">
               <input
                 type="search"
-                className="flex item-center focus:outline-none w-full py-3 ps-10 text-sm rounded-lg bg-mid4Gray border-gray-600 placeholder-gray-400 text-white"
+                className="flex item-center  w-full py-3 ps-10 text-sm rounded-lg bg-mid4Gray border-gray-600 placeholder-gray-400 text-white"
                 placeholder="Search..."
                 required
                 // style={{border:'1px solid gray'}}
-                
+                style={{
+        outline: 'none',
+        border: '1px solid dimGray',
+        padding: '0.75rem', 
+      }}
+      onFocus={(e) => {
+        e.target.style.border = '1px solid gray';
+        // e.target.style.borderWidth = '2px';
+      }}
+   
               />
 
               <button
