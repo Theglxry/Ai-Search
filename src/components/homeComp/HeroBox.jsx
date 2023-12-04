@@ -17,19 +17,21 @@ const HeroBox = () => {
 
   return (
     <section
-      className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue"
+      className="w-full md:w-1/2 h-auto ss:border-2 md:h-auto rounded-2xl bg-skyBlue z-50"
       style={backgroundImageStyle}
-      data-aos="flip-up"
-      data-aos-duration="1000" 
+      // data-aos="fade-right"
 
     >
-      <div className="hero-content flex flex-col gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16">
+      <div className="hero-content flex flex-col gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16"
+      data-aos="fade-right"
+      
+      >
         <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:6xl  ">
           <h1>Discover, Compare, Excel with AI.</h1>
         </div>
 
         <div className="font-redHatDisplay text-sm ss:text-2xl md:text-3xl leading-6">
-          <p>
+          <p >
             we are dedicated to simplifying your exploration of AI technologies,
             making informed decisions effortless, and propelling your journey
             into the future.
