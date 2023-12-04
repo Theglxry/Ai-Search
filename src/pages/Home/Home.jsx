@@ -11,7 +11,7 @@ import styles from "../../styles/style";
 
 const HomePage = () => {
   return (
-    <main className="scrollable-content w-full px-8 pb-8 h-full relative overflow-auto">
+    <main className="w-full px-8 pb-8 h-full relative overflow-auto">
       <div className={`${styles.flexCenter}`}>
         <div className={`${styles.boxWidth} mb-24`}>
           <NavBar  />

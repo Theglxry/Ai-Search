@@ -18,13 +18,13 @@ const HeroBox = () => {
 
       style={backgroundImageStyle}
     >
-      <div className="hero-content flex flex-col gap-6 p-6  md: ss:p-8  md:p-16 mb-16">
-        <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:5xl  ">
+      <div className="hero-content flex flex-col gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16">
+        <div className="hb-h1 text-darkGray text-4xl  ss:text-3xl md:6xl  ">
 
           <h1>Discover, Compare, Excel with AI.</h1>
         </div>
 
-        <div className="font-redHatDisplay text-sm ss:text-2xl  leading-6">
+        <div className="font-redHatDisplay text-sm ss:text-2xl md:text-3xl leading-6">
           <p>
             we are dedicated to simplifying your exploration of AI technologies,
             making informed decisions effortless, and propelling your journey

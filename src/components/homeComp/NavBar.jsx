@@ -1,12 +1,5 @@
 // import React from 'react'
-import {
-  gridPurple,
-  bookmark,
-  collectionIcon,
-  plusCircle,
-  menu,
-  close,
-} from "../../assets";
+import { plusCircle, menu, close } from "../../assets";
 import { navLinks } from "../../constants/constants";
 import { useState } from "react";
 
@@ -15,13 +8,10 @@ const navBar = () => {
 
   return (
     <>
-      <nav className="w-full flex py-8 justify-between items-center"
-      >
+      <nav className="w-full flex py-8 justify-between items-center">
         <div className="text-white font-panchang text-4xl font-bold">
           A.ISearch
         </div>
-
-
 
         <div className="sm:block hidden">
           <ul className="list-none flex justify-center items-center sm:text-xl gap-8 flex-1">
@@ -39,7 +29,6 @@ const navBar = () => {
             ))}
           </ul>
         </div>
-
 
         <div className="sm:flex hidden font-redHatDisplay text-sm md:text-base font-bold">
           <a
@@ -70,19 +59,19 @@ const navBar = () => {
           <div
             className={`${toggle ? "flex" : "hidden"}
            p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 
-           min-w[140px] rounded-xl sidebar flex-col items-center
+           min-w[140px] rounded-xl sidebar flex-col items-center gap-8
            
            text-white bg-midGray
            `}
             style={{ border: "1px solid gray" }}
           >
-            <ul className="list-none flex flex-col justify-end items-center flex-1">
+            <ul className="list-none flex flex-col justify-end items-center gap-8 flex-1">
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`flex items-center font-poppins 
-                font-nomal cursor-pointer 
-                text-[16px] ${
+                  className={`flex items-center
+                    font-nomal cursor-pointer 
+                    text-[16px] ${
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 } text-white`}
                 >
@@ -94,11 +83,10 @@ const navBar = () => {
             </ul>
 
             {/* purple button */}
-            <div className="sm:flex font-redHatDisplay text-sm md:text-base font-bold">
+            <div className="font-redHatDisplay text-sm md:text-base font-bold">
               <a
                 href="#"
-                className="flex rounded-lg border border-darkGray items-center bg-tertiary px-3 py-3"
-                style={{ gap: "4px" }}
+                className="flex rounded-lg  text-black border border-darkGray items-center bg-tertiary px-3 py-3"
               >
                 <img
                   src={plusCircle}
@@ -113,12 +101,6 @@ const navBar = () => {
           </div>
         </div>
       </nav>
-
-
-
-
-
-
     </>
   );
 };
