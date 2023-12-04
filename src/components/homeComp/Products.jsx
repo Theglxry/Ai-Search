@@ -9,11 +9,15 @@ const Products = () => {
   console.log(allItems);
 
   return (
-    <section className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 "
-    style={{border:'1px solid gray'}}>
+    <section
+      className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 bg-gray-200"
+      style={{ border: "1px solid gray" }}
+    >
       <div className="div-wrapper w-full h-full">
-        <div className="search-categories-wrapper w-full flex flex-col sm:flex-row justify-between sm:mb-8">
-          <form className="w-full sm:w-1/4">
+        <div
+          className="search-categories-wrapper w-full flex flex-col items-center md:flex-row justify-between  mb-8 sm:mb-8"
+        >
+          <form className="w-full md:w-1/4 mb-4 sm:mb-8 md:mb-0">
             <label
               htmlFor="default-search"
               className="mb-2 text-sm font-medium sr-only text-white"
@@ -27,17 +31,17 @@ const Products = () => {
                 className="flex item-center  w-full py-3 ps-10 text-sm rounded-lg bg-mid4Gray border-gray-600 placeholder-gray-400 text-white"
                 placeholder="Search..."
                 required
-                // style={{border:'1px solid gray'}}
                 style={{
-        outline: 'none',
-        border: '1px solid dimGray',
-        padding: '0.75rem', 
-      }}
-      onFocus={(e) => {
-        e.target.style.border = '1px solid gray';
-        // e.target.style.borderWidth = '2px';
-      }}
-   
+                  outline: "none",
+                  border: "0px solid dimGray",
+                  padding: "0.75rem",
+                }}
+                onFocus={(e) => {
+                  e.target.style.border = "1px solid gray";
+                }}
+                onBlur={(e) => {
+                  e.target.style.border = "none";
+                }}
               />
 
               <button
@@ -50,8 +54,32 @@ const Products = () => {
             </div>
           </form>
 
-          <div className="categories w-1/2" style={{ border: "1px solid red" }}>
-            categories
+          {/* _______________ USE MAP METHOD WHEN FETCHING API TO GET TAGS________ */}
+          <div className="categoryTags w-auto flex flex-wrap md:flex-nowrap items-center gap-2 sm:gap-4 text-xs sm:text-base font-redHatDisplay">
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400 " >
+              <p> Copywriting </p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Social Media</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Free Tools</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Videos</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Developer Tools</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Ecommerce</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>Email Assistant</p>
+            </div>
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
+              <p>ChatGPT Plugin </p>
+            </div>
           </div>
         </div>
 
@@ -71,7 +99,7 @@ const Products = () => {
                     <h1 className="text-base sm:text-2xl font-extrabold">
                       {title}
                     </h1>
-                    <p className="spotlight-tag inline-flex font-redHatDisplay text-gray-300 items-center justify-center p-1 sm:px-2 sm:py-2 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray">
+                    <p className="inline-flex font-redHatDisplay text-gray-300 items-center justify-center p-1 sm:px-2 sm:py-2 text-xs font-thin rounded bg-midGray shadow-2xl ring-1 ring-mid2Gray">
                       {tag}
                     </p>
                   </div>
@@ -82,10 +110,12 @@ const Products = () => {
                     {packageType}
                   </p>
                   <div className="flex flex-col sm:flex-row">
-                    <p className="font-santoshi font-extrabold text-lg sm:text-xl">
+                    <p className="font-panchang font-extrabold text-sm sm:text-xl">
                       {price}/
                     </p>
-                    <span className="font-redHatDisplay bottom-0">Month</span>
+                    <span className="font-redHatDisplay bottom-0 text-sm sm:text-xl">
+                      Month
+                    </span>
                   </div>
                 </div>
               </div>
