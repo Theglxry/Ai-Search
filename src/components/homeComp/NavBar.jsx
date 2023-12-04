@@ -14,8 +14,8 @@ const navBar = () => {
 
   return (
     <>
-      <nav className="w-full flex py-8 justify-between items-center" 
-       data-aos="fade-right" 
+      <nav className="w-full flex py-8 justify-between items-center z-50" 
+       data-aos="fade-right"  
         data-aos-duration="1000" 
       
       >
@@ -58,7 +58,7 @@ const navBar = () => {
         </div>
 
         {/* __________________________________________________mobile menu___________________________-______  */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex flex-1 justify-end items-center z-50">
           <img
             src={toggle ? close : menu}
             alt="menu"

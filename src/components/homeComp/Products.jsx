@@ -2,16 +2,27 @@
 import { useState } from "react";
 import { search, gridWhite } from "../../assets";
 import data from "../../mock/data";
+import { useEffect } from "react";
+import AOS from "aos";
+
 
 const Products = () => {
   const [allItems, setAllItems] = useState(data);
 
-  console.log(allItems);
+  useEffect (() => {
+    // Refresh AOS whenever your component mounts/updates
+    AOS.refresh();
+  }, []);
+
+
 
   return (
     <section
       className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 bg-gray-200"
       style={{ border: "1px solid gray" }}
+      data-aos="flip-right"
+      data-aos-duration="1000" 
+
     >
       <div className="div-wrapper w-full h-full">
         <div
