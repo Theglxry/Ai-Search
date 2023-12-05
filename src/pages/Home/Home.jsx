@@ -5,6 +5,7 @@ import {
   Featured,
   Spotlight,
   Product,
+  Footer
 } from "../../components/homeComp/index";
 import styles from "../../styles/style";
 // import { useEffect } from "react";
@@ -24,7 +25,7 @@ const HomePage = () => {
 
 
 
-      <section className={`w-full max-h-full flex-col gap-16 ${styles.flexCenter}`} >
+      <section className={`w-full max-h-full flex-col gap-16 sm:gap-[10rem] ${styles.flexCenter}`} >
         <section className="top-section w-full h-auto flex flex-col gap-16 md:gap-0 md:flex-row" >
           <HeroBox />
           <Featured  />
@@ -36,6 +37,8 @@ const HomePage = () => {
           <Product />
         </section>
       </section>
+
+      <Footer />
     </main>
   );
 };

@@ -3,6 +3,7 @@ import HeroBox from "./HeroBox";
 import Featured from "./Featured";
 import Spotlight from "./Spotlight"
 import Product from "./Products";
+import Footer from "./Footer";
 
 
 export  {
@@ -11,4 +12,5 @@ export  {
     Featured,
     Spotlight,
     Product,
+    Footer,
 }
