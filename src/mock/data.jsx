@@ -30,5 +30,38 @@ const allItems = [
     img: firefiles,
     category: "Free Tools",
   },
+  {
+    id: 4,
+    title: "Firefiles",
+    tag: "Note taking A.I",
+    packageType: " Freemium",
+    price: "$20",
+    img: firefiles,
+    category: "Free Tools",
+  }, {
+    id: 5,
+    title: "Firefiles",
+    tag: "Note taking A.I",
+    packageType: " Freemium",
+    price: "$20",
+    img: firefiles,
+    category: "Free Tools",
+  }, {
+    id: 6,
+    title: "Firefiles",
+    tag: "Note taking A.I",
+    packageType: " Freemium",
+    price: "$20",
+    img: firefiles,
+    category: "Free Tools",
+  }, {
+    id: 7,
+    title: "Firefiles",
+    tag: "Note taking A.I",
+    packageType: " Freemium",
+    price: "$20",
+    img: firefiles,
+    category: "Free Tools",
+  },
 ];
 export default allItems;

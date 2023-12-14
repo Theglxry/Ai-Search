@@ -3,31 +3,27 @@ import { useState } from "react";
 import { search, gridWhite } from "../../assets";
 import data from "../../mock/data";
 import { useEffect } from "react";
+import { allCategories } from "../../constants/constants";
 import AOS from "aos";
-
 
 const Products = () => {
   const [allItems, setAllItems] = useState(data);
+  const [categories, setCategories] = useState();
 
-  useEffect (() => {
+  useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
     AOS.init();
   }, []);
-
-
 
   return (
     <section
       className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 bg-gray-200"
       style={{ border: "1px solid gray" }}
       data-aos="flip-right"
-      data-aos-duration="1000" 
-
+      data-aos-duration="1000"
     >
       <div className="div-wrapper w-full h-full">
-        <div
-          className="search-categories-wrapper w-full flex flex-col items-center md:flex-row justify-between  mb-8 sm:mb-8"
-        >
+        <div className="search-categories-wrapper w-full flex flex-col items-center md:flex-row justify-between  mb-8 sm:mb-8">
           <form className="w-full md:w-1/4 mb-4 sm:mb-8 md:mb-0">
             <label
               htmlFor="default-search"
@@ -66,8 +62,9 @@ const Products = () => {
           </form>
 
           {/* _______________ USE MAP METHOD WHEN FETCHING API TO GET TAGS________ */}
+
           <div className="categoryTags w-auto flex flex-wrap md:flex-nowrap items-center gap-2 sm:gap-4 text-xs sm:text-base font-redHatDisplay">
-            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400 " >
+            <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400 ">
               <p> Copywriting </p>
             </div>
             <div className="inline-flex font-redHatDisplay text-gray-300 p-1 sm:px-6 sm:py-2 rounded ring-1 ring-gray-400">
@@ -94,7 +91,10 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="product-wrapper w-full items-center  ">
+        <div
+          className="product-wrapper w-full items-center  overflow-y-auto"
+          style={{ maxHeight: "400px"}}
+        >
           {allItems.map((items) => {
             const { id, title, tag, packageType, price, img } = items;
 

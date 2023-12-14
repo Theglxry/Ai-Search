@@ -85,3 +85,24 @@ body {
 }
 
  
+
+/* For WebKit-based browsers */
+.product-wrapper::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Track (the area on which the thumb drags) */
+.product-wrapper::-webkit-scrollbar-track {
+  background: #3c3c3c; /* Set the background color of the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.product-wrapper::-webkit-scrollbar-thumb {
+  background: gray; /* Set the color of the scrollbar */
+  border-radius: 6px; /* Roundness of the scrollbar */
+}
+
+/* Handle on hover */
+.product-wrapper::-webkit-scrollbar-thumb:hover {
+  background: darkgray; /* Change color on hover */
+}
