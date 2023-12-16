@@ -3,7 +3,7 @@
 
 const Footer = () => {
   return (
-    <footer className="mt-[10rem] flex flex-col items-center bg-neutral-200 text-center text-white dark:bg-neutral-600 rounded">
+    <footer className="  mt-[10rem] flex flex-col items-center bg-neutral-200 text-center text-white dark:bg-neutral-600 rounded">
       <div className="container pt-9">
         <div className="mb-9 flex justify-center">
           <a href="#!" className="mr-9 text-neutral-800 dark:text-neutral-200">

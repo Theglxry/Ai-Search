@@ -38,7 +38,10 @@ const HomePage = () => {
         </section>
       </section>
 
+      <footer className="absolute w-full  left-0">
       <Footer />
+
+      </footer>
     </main>
   );
 };
