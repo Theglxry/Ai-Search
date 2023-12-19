@@ -17,8 +17,8 @@ import gridPurple from "./view-grid1.svg";
 import gridWhite from "./view-grid2.svg";
 import menu from "./mobile-menu.svg";
 import close from './close.svg'
-
-
+import imgPlaceholder from './img-placeholder.webp'
+import imgPlaceholderDark from './placeholder-image-dark.jpeg'
 
 
 
@@ -42,5 +42,7 @@ gridBlack,
 gridPurple,
 gridWhite,
 menu,
-close
+close,
+imgPlaceholder,
+imgPlaceholderDark
 }
