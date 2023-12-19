@@ -8,6 +8,7 @@ import {
   Footer
 } from "../../components/homeComp/index";
 import styles from "../../styles/style";
+// import 
 // import { useEffect } from "react";
 
 
@@ -16,6 +17,7 @@ const HomePage = () => {
 
 
   return (
+  
     <main className="w-full px-8 pb-8 h-full relative overflow-auto">
       <div className={`${styles.flexCenter}`}>
         <div className={`${styles.boxWidth} mb-24`}>

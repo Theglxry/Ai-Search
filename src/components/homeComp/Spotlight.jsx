@@ -1,25 +1,35 @@
 import { elevenLabImg, slantArrow } from "../../assets";
 import { useEffect } from "react";
 import AOS from "aos";
+import SpotlightSkeleton from "../skeletons/SpotlightSkeleton";
+import { useLoaderLogic } from "../../hooks/useAppLogic";
+
+
+
 
 const Spotlight = () => {
+  const { isLoading } = useLoaderLogic();
+
+
+
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
     AOS.init({
       duration: 1200,
     });
-
-
- 
   }, []);
 
   return (
-    <section className="spotlight-container w-full md:w-[30rem] h-auto p-4 border-mid2Gray border-2 rounded-2xl"
-   style={{border: `0.5px solid gray`}}
-   data-aos="zoom-in"
-  //  data-aos-duration="1000" 
-
+    <section
+      className="spotlight-container w-full md:w-[30rem] h-auto p-4 border-mid2Gray border-2 rounded-2xl"
+      style={{ border: `0.5px solid gray` }}
+      data-aos="zoom-in"
+      //  data-aos-duration="1000"
     >
+{isLoading ? ( <SpotlightSkeleton />) :  (
+
+
+
       <div className="w-full flex flex-col gap-4 ">
         <div className="child-1 w-full border rounded-2xl relative">
           <img src={elevenLabImg} className="w-full rounded-t-xl" />
@@ -29,15 +39,6 @@ const Spotlight = () => {
             <h1 className="sp-text text-lg">ElevenLabs</h1>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
 
         {/* _______________________________ SPOTLIGHT SECTION ___________________________ */}
         <div className="child-2 w-full rounded-2xl">
@@ -115,14 +116,11 @@ const Spotlight = () => {
                   </div>
                 </a>
               </li>
-
-
-
-              
             </ul>
           </div>
         </div>
       </div>
+      )}
     </section>
   );
 };

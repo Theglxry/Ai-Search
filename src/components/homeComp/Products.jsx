@@ -5,10 +5,17 @@ import data from "../../mock/data";
 import { useEffect } from "react";
 import { allCategories } from "../../constants/constants";
 import AOS from "aos";
+import ProductSkeleton from "../skeletons/ProductSkeleton";
+import { useLoaderLogic } from "../../hooks/useAppLogic";
+
 
 const Products = () => {
   const [allItems, setAllItems] = useState(data);
   const [categories, setCategories] = useState();
+  const { isLoading } = useLoaderLogic();
+
+  
+
 
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
@@ -21,7 +28,10 @@ const Products = () => {
       style={{ border: "1px solid gray" }}
       data-aos="flip-right"
       data-aos-duration="1000"
-    >
+    > 
+        {isLoading ?( <ProductSkeleton /> ) : (
+
+
       <div className="div-wrapper w-full h-full">
         <div className="search-categories-wrapper w-full flex flex-col items-center md:flex-row justify-between  mb-8 sm:mb-8">
           <form className="w-full md:w-1/4 mb-4 sm:mb-8 md:mb-0">
@@ -145,6 +155,7 @@ const Products = () => {
           </a>
         </div>
       </div>
+        )}
     </section>
   );
 };

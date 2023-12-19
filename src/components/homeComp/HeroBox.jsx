@@ -1,23 +1,32 @@
 import { group, gridBlack } from "../../assets/index";
-import { useEffect, useState } from "react";
-import AOS from "aos";
-import SkeletonHero from "../skeletons/SkeletonHero";
+// import { useEffect, useState } from "react";
+// import AOS from "aos";
+import HeroboxSkeleton from "../skeletons/HeroboxSkeleton";
+import { useLoaderLogic } from "../../hooks/useAppLogic";
+
 
 const HeroBox = () => {
-  const [loading, setLoading] = useState(true);
+  const { isLoading } = useLoaderLogic();
 
-  useEffect(() => {
-    // simulating a delay to mimic data fetching
-    const timeout = setTimeout(() => {
-      setLoading(false);
-      AOS.init();
-    }, 2000);
+  // const [loading, setLoading] = useState(true);
 
-    // Refresh AOS whenever your component mounts/updates
-    // AOS.init();
 
-    return () => clearTimeout(timeout);
-  }, []);
+
+  // useEffect(() => {
+    //_____________-simulating a delay to mimic data fetching
+    // const timeout = setTimeout(() => {
+      // setLoading(false);
+      // AOS.init();
+    // }, 2000);
+
+
+    //_______ Refresh AOS whenever your component mounts/updates
+    //________ AOS.init();
+    // return () => clearTimeout(timeout);
+  // }, []);
+
+
+
 
   const backgroundImageStyle = {
     backgroundImage: `url(${group})`,
@@ -30,14 +39,10 @@ const HeroBox = () => {
     <section
       className="w-full md:w-1/2 h-auto flex items-center justify-center ss:border-2 md:h-auto rounded-2xl bg-skyBlue "
       style={backgroundImageStyle}
-      // data-aos="fade-right"
     >
-      {loading ? (
-
-        [...Array(10).keys()].map(i =>{
-          return  <SkeletonHero key={i} />
-        })
-      ) : ( 
+      {isLoading ? (
+        <HeroboxSkeleton />
+      ) : (
         <div
           className="hero-content flex flex-col  gap-6 p-6 sm:w-[45rem] md: ss:p-8  md:p-16 mb-16"
           // data-aos="fade-right"

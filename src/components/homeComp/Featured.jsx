@@ -1,10 +1,12 @@
 import { chatGPTImg, evolutionImg, arrowCircleRight } from "../../assets";
 import {useEffect } from "react";
 import AOS from "aos";
-
-
+import FeaturedSkeleton from "../skeletons/FeaturedSkeleton";
+import { useLoaderLogic } from "../../hooks/useAppLogic";
 
 const Featured = () => {
+  const { isLoading } = useLoaderLogic();
+
 
   useEffect(() => {
     // Refresh AOS whenever your component mounts/updates
@@ -18,6 +20,9 @@ const Featured = () => {
       </div>
 
       {/* FEAURED ONE  */}
+
+        {isLoading ?( <FeaturedSkeleton /> ) : (
+
       <div className="featured w-full flex flex-col justify-center items-center gap-8 md:h-[400px]">
         <div className="featured-child1 relative w-full flex justify-center items-center overflow-hidden rounded-xl "
          data-aos="fade-right"
@@ -80,6 +85,8 @@ const Featured = () => {
           </div>
         </div>
       </div>
+      )}
+
     </section>
   );
 };
