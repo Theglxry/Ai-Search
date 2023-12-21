@@ -26,8 +26,8 @@ const Products = () => {
     <section
       className="w-full text-white px-4 pb-4 sm:px-8 pt-8 sm:pt-16 rounded-2xl bg-opacity-10 bg-gray-200"
       style={{ border: "1px solid gray" }}
-      data-aos="flip-right"
-      data-aos-duration="1000"
+      // data-aos="flip-right"
+      // data-aos-duration="1000"
     > 
         {isLoading ?( <ProductSkeleton /> ) : (
 

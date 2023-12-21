@@ -33,7 +33,7 @@ const HeroboxSkeleton = () => {
       style={backgroundImageStyle}
     
     >
-      <div className="animate-pulse w-full h-[20rem] flex flex-col justify-center gap-10 md:gap-20"
+      <div className="animate-pulse w-full h-[20rem] flex flex-col justify-center gap-10 md:gap-20 bg-gray-700 opacity-50"
       // style={{border:'2px solid red'}}
       >
         <div className="w-full flex flex-col gap-4 md:gap-8">
