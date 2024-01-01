@@ -1,9 +1,9 @@
 // import React from 'react'
 
-const featuredArticlepage = () => {
+const FeaturedArticlepage = () => {
   return (
     <div>featuredArticlepage</div>
   )
 }
 
-export default featuredArticlepage
+export default FeaturedArticlepage;

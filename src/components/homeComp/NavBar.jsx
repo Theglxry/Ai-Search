@@ -7,7 +7,7 @@ import AOS from "aos";
 
 
 
-const navBar = () => {
+const NavBar = () => {
   const [toggle, setToggle] = useState(false);
 
  useEffect (() => {
@@ -118,4 +118,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;
