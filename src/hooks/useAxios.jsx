@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -6,14 +7,21 @@ const useFeaturedArticles = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const apiInstance = axios.create({
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Upgrade': 'HTTP/2.0', // Add this line if you want to explicitly specify the protocol version
+      },
+    });
+
     const fetchArticles = async () => {
       try {
         const apiKey = import.meta.env.VITE_REACT_APP_NEWS_API_KEY;
         const apiUrl = `https://newsapi.org/v2/everything?q=Evolution%20AI%20OR%20ChatGPT&apiKey=${apiKey}&pageSize=2`;
         // const apiUrl = `https://newsapi.org/v2/everything?q=AI&apiKey=${apiKey}&pageSize=2`;
-       
-       
-        const res = await axios.get(apiUrl);
+
+        const res = await apiInstance.get(apiUrl);
         if (res.data.articles) {
           console.log(res.data.articles);
           setFeaturedItems(res.data.articles);
@@ -23,8 +31,7 @@ const useFeaturedArticles = () => {
         console.error("Error fetching request", error);
       }
     };
-
-    
+ 
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -32,8 +39,7 @@ const useFeaturedArticles = () => {
     fetchArticles();
 
     return () => {
-      clearTimeout(loadingTimeout); // Cleanup function to clear the timeout in case the component unmounts
-
+      clearTimeout(loadingTimeout);
     };
   }, []);
 
@@ -42,16 +48,5 @@ const useFeaturedArticles = () => {
     isLoading,
   };
 };
-
-
-
-
-
-
-const useSpotLight = () => {
-
-}
-
-
 
 export { useFeaturedArticles };
